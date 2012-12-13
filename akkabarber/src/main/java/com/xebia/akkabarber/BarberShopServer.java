@@ -33,6 +33,7 @@ public class BarberShopServer implements Bootable {
 			}
 		}), "shop");
 		System.out.println("Shop is open...");
+		
 	}
 
 

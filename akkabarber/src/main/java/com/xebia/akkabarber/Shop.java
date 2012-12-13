@@ -15,6 +15,8 @@ public class Shop extends UntypedActor {
 
 	ActorRef barber;
 
+	int counter = 0;
+
 	public Shop(ActorRef barber) {
 		this.barber = barber;
 	}
@@ -34,7 +36,14 @@ public class Shop extends UntypedActor {
 			System.out.println("Customer " + customer.getId() + " is leaving");
 			return;
 		}
+		counter++;
 		customers.add((Customer) message);
+	}
+
+	@Override
+	public void postStop() {
+		System.out.println(counter + " Customers got a haircut today");
+		super.postStop();
 	}
 
 }
