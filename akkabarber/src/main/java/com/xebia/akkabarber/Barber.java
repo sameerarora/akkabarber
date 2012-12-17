@@ -24,7 +24,7 @@ public class Barber extends UntypedActor {
 	}
 
 	private boolean performHaircut() throws InterruptedException {
-		Thread.sleep(random.nextInt(450));
+		Thread.sleep(random.nextInt(1150));
 		return true;
 	}
 

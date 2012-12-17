@@ -27,7 +27,7 @@ public class Client {
 		}
 		
 		Thread.sleep(10000);
-		system.shutdown();
+		System.exit(0);
 	}
 
 	private static void startWakeUpThread(final ActorRef shop) {
